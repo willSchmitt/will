@@ -1,0 +1,1 @@
+export { SalePending as default } from '@/modules/sales/pages/pending'

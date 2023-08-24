@@ -1,0 +1,1 @@
+export { SaleCompleted as default } from '@/modules/sales/pages/completed'

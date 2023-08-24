@@ -1,0 +1,1 @@
+export { LessonPage as default, getServerSideProps } from '@/modules/lessons/pages/lessons'
