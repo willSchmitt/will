@@ -8,7 +8,7 @@ export const MethodsPerpetuoContainer = styled.main`
 
   top: -9rem;
   position: relative;
-  border-top-right-radius: 12.125rem;
+  border-top-right-radius: 7rem;
 
   padding-bottom: 6.25rem;
 

@@ -18,7 +18,7 @@ type Props = {
   pageData: string;
 };
 
-export const PerpertuoPage = ({ pageData }: Props) =>  {
+export const PerpertuoPage = ({ pageData }: Props) => {
   return (
     <PerpetuoContext.Provider value={{ pageData: JSON.parse(pageData) }}>
       <PerpertuoPageContainer>
@@ -35,10 +35,11 @@ export const PerpertuoPage = ({ pageData }: Props) =>  {
       </PerpertuoPageContainer>
     </PerpetuoContext.Provider>
   );
-}
+};
 
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
   const pageData = await getPerpetuoUseCase();
+  console.log(pageData);
 
   return {
     props: {

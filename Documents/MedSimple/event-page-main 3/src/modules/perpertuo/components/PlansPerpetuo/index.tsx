@@ -2,8 +2,10 @@ import { Wrapper } from "@/components/Wrapper";
 import { PlansPerpetuoContainer, TypePlans } from "./styles";
 import { CardAssurance } from "@/modules/sales/components/Plans/CardAssurance";
 import { CardPlans } from "./CardPlans";
+import { usePerpetuo } from "../../contexts/PerpetuoContext";
 
 export function PlansPerpetuo() {
+  const { pageData } = usePerpetuo();
   return (
     <PlansPerpetuoContainer>
       <Wrapper>
@@ -17,8 +19,8 @@ export function PlansPerpetuo() {
               name: "Anual",
               description: "1 ano de assinatura",
               period: "12 meses",
-              installmentPrice: "R$20,00",
-              totalPrice: "R$200,00",
+              installmentPrice: "R$39,90",
+              totalPrice: "R$399,80",
               url: "",
               proviUrl: "",
             }}
@@ -29,12 +31,13 @@ export function PlansPerpetuo() {
               name: "Bianual",
               description: "2 anos de assinatura",
               period: "24 meses",
-              installmentPrice: "R$20,00",
-              totalPrice: "R$200,00",
+              installmentPrice: "R$59,58",
+              totalPrice: "R$597,00",
               url: "",
               proviUrl: "",
             }}
           />
+
           <CardAssurance />
         </TypePlans>
       </Wrapper>

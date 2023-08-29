@@ -5,7 +5,7 @@ import { backofficeApi } from "@/services/backoffice";
 
 export const getPerpetuoUseCase = async (): Promise<Perpetuo> => {
   const { data: response } = await backofficeApi.get<{ data: PerpetuoDTO }>(
-    "/pages/perpetuo",
+    "/perpetuo",
     {
       params: {
         populate: ["testimonies", "Faq", "PlansSales"],

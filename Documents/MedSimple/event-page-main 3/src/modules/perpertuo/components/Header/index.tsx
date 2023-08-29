@@ -8,8 +8,12 @@ import {
 } from "./styles";
 import Image from "next/image";
 import { ButtonPerpetuo } from "@/components/ButtonPerpetuo";
+import { VideoPlayer } from "@/components/VideoPlayer";
+import { usePerpetuo } from "../../contexts/PerpetuoContext";
 
 export function HeaderPerpetuo() {
+  const { pageData } = usePerpetuo();
+
   return (
     <PerpetuoContainer>
       <Wrapper>
@@ -61,15 +65,9 @@ export function HeaderPerpetuo() {
         </CardHeaderPerpetuo>
 
         <VideoHeaderPerpetuo>
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/adEPkN4pcTw"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
+          <VideoPlayer
+            videoUrl={`https://www.youtube.com/embed/${pageData.videoHeader}`}
+          />
           <p>
             Você não vai ouvir que é `só sentar a bunda na cadeira e estudar` ou
             que `aprender medicina é só para quem é super inteligente`. Assista
@@ -77,7 +75,7 @@ export function HeaderPerpetuo() {
             tentar ler capítulos de livro de madrugada.
           </p>
         </VideoHeaderPerpetuo>
-
+        
         <ButtonHeaderPerpetuo>
           <ButtonPerpetuo />
           <Image

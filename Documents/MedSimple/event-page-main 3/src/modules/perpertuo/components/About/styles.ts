@@ -3,6 +3,9 @@ import styled from "styled-components";
 
 export const AboutContainer = styled.div`
   background-image: url(/images/imagesPerpetuo/bgAbout.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
   ${Wrapper} {
     display: flex;
     flex-direction: column;
@@ -26,6 +29,10 @@ export const AboutContainer = styled.div`
       display: flex;
       gap: 3.75rem;
       flex-direction: column;
+
+      ${({ theme }) => theme.breakpoints.mobile} {
+        gap: 1.25rem;
+      }
     }
 
     ${({ theme }) => theme.breakpoints.mobile} {
@@ -40,6 +47,27 @@ export const AboutContainer = styled.div`
         gap: 1.25rem;
       }
     }
+
+    ${({ theme }) => theme.breakpoints.mobile} {
+      gap: 0;
+
+      h2 {
+        margin-bottom: 2.5rem;
+      }
+    }
+  }
+`;
+
+export const VideoAbout = styled.div`
+  background-color: ${({ theme }) => theme.colors.blue600};
+  width: 50%;
+
+  border-radius: 1.25rem;
+
+  ${({ theme }) => theme.breakpoints.mobile} {
+    flex-direction: column;
+
+    width: 100%;
   }
 `;
 
@@ -53,17 +81,15 @@ export const VideoText = styled.div`
   border-radius: 1.25rem;
 
   iframe {
-    background-color: ${({ theme }) => theme.colors.blue600};
-    width: 50%;
-
-    border-radius: 1.25rem;
+    border-top-left-radius: 1.25rem;
+    border-bottom-left-radius: 1.25rem;
   }
 
   ${({ theme }) => theme.breakpoints.mobile} {
     flex-direction: column;
 
     iframe {
-      width: 100%;
+      border-top-right-radius: 1.25rem;
     }
   }
 `;

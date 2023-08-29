@@ -1,5 +1,11 @@
 export type PerpetuoDTO = {
-  videoHeader: string;
+  id: number;
+  attributes: {
+    video_header: string;
+    testimonies: PerpetuoTestimoniesDTO[];
+    PlansSales: PerpetuoPlansDTO[];
+    Faq: PerpetuoFAQDTO[];
+  };
 };
 
 export type PerpetuoTestimoniesDTO = {

@@ -37,6 +37,11 @@ export const PerpetuoContainer = styled.main`
 
     ${({ theme }) => theme.breakpoints.mobile} {
       section {
+        h1 {
+          font-size: 1.5rem;
+          line-height: 1.75rem;
+        }
+
         img {
           margin-bottom: 0.5rem;
         }
@@ -72,6 +77,13 @@ export const CardHeaderPerpetuo = styled.div`
     text-align: center;
     font-weight: 600;
   }
+
+  ${({ theme }) => theme.breakpoints.mobile} {
+    h2 {
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+    }
+  }
 `;
 
 export const Methods = styled.div`
@@ -104,16 +116,12 @@ export const Methods = styled.div`
   }
 
   ${({ theme }) => theme.breakpoints.mobile} {
+    align-items: flex-start;
     padding-bottom: 1.8rem;
   }
 `;
 
 export const VideoHeaderPerpetuo = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.25rem;
-
   margin-bottom: 2.5rem;
 
   iframe {
@@ -132,6 +140,8 @@ export const VideoHeaderPerpetuo = styled.div`
 
     color: ${({ theme }) => theme.colors.white};
     text-align: center;
+
+    margin-top: 1.25rem;
   }
 
   ${({ theme }) => theme.breakpoints.mobile} {
@@ -159,5 +169,12 @@ export const ButtonHeaderPerpetuo = styled.div`
 
   ${({ theme }) => theme.breakpoints.mobile} {
     margin-bottom: 10rem;
+
+    img {
+      max-width: 17rem;
+      width: 100%;
+
+      object-fit: contain;
+    }
   }
 `;

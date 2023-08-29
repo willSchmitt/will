@@ -11,7 +11,6 @@ import {
 } from "./styles";
 
 type Offer = {
-  isRecommended?: boolean;
   name: string;
   description: string;
   period: string;

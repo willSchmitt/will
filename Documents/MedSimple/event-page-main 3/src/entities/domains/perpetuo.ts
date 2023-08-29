@@ -1,5 +1,8 @@
 export type Perpetuo = {
-  video_header: string;
+  videoHeader: string;
+  testimonials: PerpetuoTestimonies[];
+  faq: PerpetuoFAQ[];
+  plans: PerpetuoPlans[];
 };
 
 export type PerpetuoTestimonies = {

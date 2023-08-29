@@ -11,12 +11,6 @@ import {
   PerpetuoTestimoniesDTO,
 } from "../dtos/perpetuo";
 
-export const mapPerpetuo = (dto: PerpetuoDTO): Perpetuo => {
-  return {
-    video_header: dto.videoHeader,
-  };
-};
-
 export const mapPerpetuoPlans = (dto: PerpetuoPlansDTO): PerpetuoPlans => {
   return {
     id: dto.id,
@@ -44,5 +38,14 @@ export const mapPerpetuoTestimonies = (
     title: dto.title,
     description: dto.description,
     videoTestimonies: dto.videoTestimonies,
+  };
+};
+
+export const mapPerpetuo = (dto: PerpetuoDTO): Perpetuo => {
+  return {
+    videoHeader: dto.attributes.video_header,
+    testimonials: dto.attributes.testimonies.map(mapPerpetuoTestimonies),
+    plans: dto.attributes.PlansSales.map(mapPerpetuoPlans),
+    faq: dto.attributes.Faq.map(mapPerpetuoFAQ),
   };
 };

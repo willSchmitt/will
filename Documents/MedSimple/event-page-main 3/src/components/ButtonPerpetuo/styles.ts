@@ -23,6 +23,8 @@ export const ButtonPerpetuoContiner = styled.button`
   }
 
   ${({ theme }) => theme.breakpoints.mobile} {
+    padding: 0.625rem 1.25rem;
+
     font-size: 0.75rem;
     line-height: 1.125rem;
   }
